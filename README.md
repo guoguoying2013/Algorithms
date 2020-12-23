@@ -1,2 +1,2 @@
 # Algorithms
-algorithm/data structure practice
+This repo is for algorithm/data structure practice
