@@ -22,7 +22,7 @@ var rotate = function(nums, k) {
     nums.unshift(...nums.splice(nums.length - k));
 };
 // time complexity O(n)
-// space complexity O(k)
+// space complexity O(k) ?
 
 /*
 Using Reverse
