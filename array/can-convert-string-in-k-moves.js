@@ -20,7 +20,7 @@ const canConvertString = function(s, t, k) {
   if (s === t) {
     return true;
   };
-  const shitsNum = [];
+  const shiftNum = [];
   const alphabet =
     [
       'a', 'b', 'c', 'd', 'e',
@@ -31,18 +31,18 @@ const canConvertString = function(s, t, k) {
       'z'
     ] ;
   for (let i = 0; i < s.length; i++) {
-    shitsNum.push(Math.abs(alphabet.indexOf(s[i]) - alphabet.indexOf(t[i]))); 
+    shiftNum.push(Math.abs(alphabet.indexOf(s[i]) - alphabet.indexOf(t[i]))); 
   };
-  console.log(shitsNum);
+  console.log(shiftNum);
   const counter = {};
-  for (let l = 0; l < shitsNum.length; l++) {
+  for (let l = 0; l < shiftNum.length; l++) {
     if (l > k) {
       return false;
     }
-    if (counter[shitsNum[l]] === undefined) {
-      counter[shitsNum[l]] = 1;
+    if (counter[shiftNum[l]] === undefined) {
+      counter[shiftNum[l]] = 1;
     } else {
-      counter[shitsNum[l]]++;
+      counter[shiftNum[l]]++;
     }
   }
   const allowableOverlap = Math.floor(k/26);
