@@ -50,6 +50,8 @@ const checkPermutation2 = (str1, str2) => {
   return true;
 }
 
+// time complexity O(n)
+
 console.log(checkPermutation2('god  ', 'dog'));
 console.log(checkPermutation2('God', 'dog'));
 console.log(checkPermutation2('god', 'dog'));
