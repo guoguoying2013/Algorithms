@@ -1,0 +1,50 @@
+class Stack { 
+  
+    // Array is used to implement stack 
+    constructor() { 
+        this.items = []; 
+    } 
+  
+    // Functions to be implemented 
+    push(element) { 
+        // push element into the items 
+        this.items.push(element); 
+    } 
+
+    pop() { 
+        // return top most element in the stack 
+        // and removes it from the stack 
+        // Underflow if stack is empty 
+        if (this.items.length == 0) 
+            return "Underflow"; 
+        return this.items.pop(); 
+    } 
+
+    peek() { 
+        // return the top most element from the stack 
+        // but does'nt delete it. 
+        return this.items[this.items.length - 1]; 
+    } 
+
+    isEmpty() { 
+    // return true if stack is empty 
+    return this.items.length == 0; 
+    } 
+    
+    printStack() { 
+    var str = ""; 
+    for (var i = 0; i < this.items.length; i++) 
+        str += this.items[i] + " "; 
+    return str; 
+    } 
+};
+
+let myStack = new Stack();
+console.log(myStack.isEmpty());
+console.log(myStack.pop());
+myStack.push(10); 
+myStack.push(20); 
+myStack.push(30);
+console.log(myStack.printStack()); 
+console.log(myStack.pop());
+console.log(myStack.printStack());  
